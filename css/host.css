@@ -1,7 +1,10 @@
 body {
+  
   margin: 0;
   padding: 0;
+  
   font-family: Arial;
+  
   background: #FFF5E4;
   
   display: flex;
@@ -9,10 +12,13 @@ body {
   align-items: center;
   
   min-height: 100vh;
+  
 }
 
 .container {
+  
   background: white;
+  
   width: 90%;
   max-width: 400px;
   
@@ -22,62 +28,61 @@ body {
   
   text-align: center;
   
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  color: #ff6600;
 }
 
 button {
+  
   width: 100%;
+  
   padding: 18px;
   
   border: none;
   border-radius: 15px;
   
   background: #ff914d;
+  
   color: white;
   
   font-size: 18px;
   font-weight: bold;
+  
 }
 
-.room-box {
-  margin-top: 25px;
+.roomBox {
   
   background: #FFE9C9;
+  
+  margin-top: 20px;
   
   padding: 20px;
   
   border-radius: 20px;
+  
 }
 
 #roomCode {
+  
   font-size: 40px;
   color: #ff6600;
-}
-
-.players {
-  margin-top: 25px;
   
-  text-align: left;
 }
 
-.players ul {
-  padding-left: 20px;
+ul {
+  
+  padding: 0;
+  
+  list-style: none;
+  
 }
 
-.players li {
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-#startGame {
-  margin-top: 15px;
-  background: #4CAF50;
-}
-button {
-  position: relative;
-  z-index: 10;
-  cursor: pointer;
+li {
+  
+  background: #FFE9C9;
+  
+  padding: 15px;
+  
+  margin-top: 10px;
+  
+  border-radius: 15px;
+  
 }

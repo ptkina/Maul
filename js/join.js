@@ -1,11 +1,10 @@
 import { db }
-from "../js/firebase.js";
+from "./firebase.js";
 
 import {
   
-doc,
-setDoc,
-onSnapshot
+  doc,
+  setDoc
   
 }
 from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
@@ -53,47 +52,8 @@ joinBtn.onclick = async () => {
     
   );
   
-  localStorage.setItem(
-    "playerName",
-    name
-  );
-  
-  localStorage.setItem(
-    "roomCode",
-    room
-  );
-  
   alert(
     "Berhasil masuk room!"
   );
   
-  window.location.href =
-    "kuis.html";
-  
 };
-function waitGameStart(room) {
-  
-  const roomRef =
-    doc(
-      db,
-      "rooms",
-      room
-    );
-  
-  onSnapshot(
-    roomRef,
-    (snapshot) => {
-      
-      const data =
-        snapshot.data();
-      
-      if (data.started) {
-        
-        waitGameStart(room);
-        
-      }
-      
-    }
-  );
-  
-}

@@ -1,13 +1,12 @@
 import { db }
-from "../js/firebase.js";
+from "./firebase.js";
 
 import {
   
-doc,
-setDoc,
-updateDoc,
-collection,
-onSnapshot
+  doc,
+  setDoc,
+  collection,
+  onSnapshot
   
 }
 from "https://www.gstatic.com/firebasejs/12.3.0/firebase-firestore.js";
@@ -26,10 +25,6 @@ const playerList =
   document.getElementById(
     "playerList"
   );
-  const startBtn =
-document.getElementById(
-  "startGame"
-);
 
 let currentRoom = "";
 
@@ -82,12 +77,16 @@ function listenPlayers() {
       snapshot.forEach((doc) => {
         
         const li =
-          document.createElement("li");
+          document.createElement(
+            "li"
+          );
         
         li.innerText =
           doc.id;
         
-        playerList.appendChild(li);
+        playerList.appendChild(
+          li
+        );
         
       });
       
@@ -95,34 +94,3 @@ function listenPlayers() {
   );
   
 }
-startBtn.onclick = async () => {
-  
-  if (currentRoom === "") {
-    
-    alert(
-      "Buat room dulu!"
-    );
-    
-    return;
-    
-  }
-  
-  await updateDoc(
-    
-    doc(
-      db,
-      "rooms",
-      currentRoom
-    ),
-    
-    {
-      started: true
-    }
-    
-  );
-  
-  alert(
-    "Game dimulai!"
-  );
-  
-};
