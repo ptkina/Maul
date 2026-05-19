@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Anagram</title>
+
+  <link rel="stylesheet" href="../css/anagram.css">
+</head>
+<body>
+
+  <header>
+
+    <a href="game.html" class="back">
+      ⬅
+    </a>
+
+    <h1>🔤 Anagram</h1>
+
+  </header>
+
+  <div class="container">
+
+    <div class="info">
+
+      <div id="score">
+        Score: 0
+      </div>
+
+      <div id="timer">
+        ⏰ 15
+      </div>
+
+    </div>
+
+    <div class="question-box">
+
+      <h2>
+        Susun Huruf Berikut!
+      </h2>
+
+      <div id="scrambled-word">
+
+      </div>
+
+      <input 
+        type="text"
+        id="answer"
+        placeholder="Tulis jawaban..."
+      >
+
+      <button onclick="checkAnswer()">
+        Jawab
+      </button>
+
+    </div>
+
+  </div>
+
+  <script src="../js/anagram.js"></script>
+
+</body>
+</html>
